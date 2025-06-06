@@ -45,3 +45,5 @@ services:
       - ./flutter:/src
     ports:
       - 80:80
+    environment:
+      BACKEND_URI: http://backend
