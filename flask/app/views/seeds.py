@@ -11,7 +11,7 @@ class SeedsView(MethodView):
             db.session.execute(text("SELECT id FROM users LIMIT 1;"))
             response = jsonify({
                 "result": "success",
-                "code": 201,
+                "code": 200,
             })
         except:
             response = jsonify({
