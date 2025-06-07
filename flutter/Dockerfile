@@ -17,7 +17,7 @@ RUN flutter pub get
 COPY . .
 
 # Build the Flutter app
-RUN flutter build web
+RUN flutter build web --dart-define=BACKEND_URI=http://localhost:5000
 
 # ENTRYPOINT flutter run lib/main.dart
 # ENTRYPOINT flutter run -d chrome --web-port=3000
