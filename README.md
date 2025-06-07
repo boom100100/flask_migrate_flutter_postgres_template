@@ -1,5 +1,8 @@
 # Flask Migrate Postgres with Nginx Server Docker Template
 
+## Dependencies
+[Docker](https://docs.docker.com/desktop/setup/install/mac-install/).
+
 ## Run
 Build the app by running the following:
 
