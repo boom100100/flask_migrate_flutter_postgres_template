@@ -1,5 +1,8 @@
 # Flask Migrate, Flutter on Nginx Server, and Postgres Docker Template
 
+## Dependencies
+[Docker](https://docs.docker.com/desktop/setup/install/mac-install/).
+
 ## Run
 Build the app by running the following:
 
