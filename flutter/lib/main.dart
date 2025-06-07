@@ -1,7 +1,14 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
 
-void main() {
+Future<void> main() async {
   runApp(const MyApp());
+  const thisHereString = String.fromEnvironment('BACKEND_URI', defaultValue: "");
+  print(thisHereString);
+  var backendUri = Uri.parse("$thisHereString/api/v1/seeds");
+  final response = await http.get(backendUri);
+  print(response.body);
 }
 
 class MyApp extends StatelessWidget {
