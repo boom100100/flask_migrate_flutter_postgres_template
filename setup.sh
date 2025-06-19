@@ -6,6 +6,8 @@ cp -f pubspec.yaml ./flutter/pubspec.yaml
 
 # create react app
 npx create-react-app react
+# TBH, you should probably use a framework.
+#  npx create-next-app@latest
 cp Dockerfile.react_dev ./react_app/Dockerfile
 cp -f App.js ./react_app/src/App.js
 
