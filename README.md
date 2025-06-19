@@ -1,17 +1,23 @@
 # Flask Migrate, Flutter on Nginx Server, and Postgres Docker Template
 
 ## Dependencies
-[Docker](https://docs.docker.com/desktop/setup/install/mac-install/).
+- [Docker](https://docs.docker.com/desktop/setup/install/mac-install/).
+- [Flutter](https://docs.flutter.dev/get-started/install)
+- [npm CLI](https://github.com/npm/cli)
 
-## Run
+## Build
+Before building, set value of sensitive environmental variables (e.g. POSTGRES_PASSWORD) in `compose.yml`.
+
 Build the app by running the following:
-
-    docker-compose build; docker-compose up -d
+    chmod +x ./setup.sh
+    ./setup.sh
+    rm ./setup.sh
 
 Then, visit the backend and frontend to confirm it worked:
 
 http://localhost:5000/api/v1/seeds 
 http://localhost
+http://localhost:3000
 
 In the browser, the backend response (at http://localhost:5000) and the frontend page's dev console (at http://localhost) should show json data indicating that it worked:
 
@@ -23,6 +29,11 @@ In the browser, the backend response (at http://localhost:5000) and the frontend
 
 
 So the backend succeeded at connecting to Postgres and running the database migration, and then it succeeded at querying the database. For the frontend's part, it succeeded at hitting the backend endpoint and it received the same response the functioning backend sends out from `/api/v1/seeds`.
+
+## Run
+
+    docker-compose up -d
+    docker-compose down -d
 
 ## Development
 
