@@ -2,13 +2,14 @@
 
 ## Dependencies
 - [Docker](https://docs.docker.com/desktop/setup/install/mac-install/).
-- Flutter
-- React
+- [Flutter](https://docs.flutter.dev/get-started/install)
+- [npm CLI](https://github.com/npm/cli)
 
 ## Build
 Build the app by running the following:
     chmod +x ./setup.sh
     ./setup.sh
+    rm ./setup.sh
 
 But just run the already existing apps with this command:
 
