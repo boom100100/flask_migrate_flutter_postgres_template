@@ -6,14 +6,12 @@
 - [npm CLI](https://github.com/npm/cli)
 
 ## Build
+Before building, set value of sensitive environmental variables (e.g. POSTGRES_PASSWORD) in `compose.yml`.
+
 Build the app by running the following:
     chmod +x ./setup.sh
     ./setup.sh
     rm ./setup.sh
-
-But just run the already existing apps with this command:
-
-    docker-compose up -d
 
 Then, visit the backend and frontend to confirm it worked:
 
