@@ -39,12 +39,12 @@ services:
 
   flutter:
     build:
-      context: flutter
+      context: flutter_app
       args:
         BACKEND_URI: http://localhost:5000
     image: flutter_frontend
     volumes:
-      - ./flutter:/src
+      - ./flutter_app:/src
     ports:
       - 80:80
 
