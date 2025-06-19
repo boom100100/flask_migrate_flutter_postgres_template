@@ -1,4 +1,4 @@
-# Full Stack Docker Compose Template
+# Web App Stack Docker Compose Template
 Stand up a connected backend and frontend using Docker Compose.
 
 Includes:
@@ -19,15 +19,16 @@ Includes:
 Before building, set value of sensitive environmental variables (e.g. POSTGRES_PASSWORD) in `compose.yml`.
 
 Build the app by running the following:
+
     chmod +x ./setup.sh
     ./setup.sh
     rm ./setup.sh
 
 Then, visit the backend and frontend to confirm it worked:
 
-http://localhost:5000/api/v1/seeds 
-http://localhost
-http://localhost:3000
+    http://localhost:5000/api/v1/seeds
+    http://localhost
+    http://localhost:3000
 
 In the browser, the backend response (at http://localhost:5000) and the frontend page's dev console (at http://localhost) should show json data indicating that it worked:
 
