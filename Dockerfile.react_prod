@@ -1,9 +1,23 @@
 # Build Stage
 FROM node:18-alpine AS build
+
+# set the backend path
+ARG BACKEND_URI
+ENV REACT_APP_BACKEND_URI $BACKEND_URI
+
+# Set the working directory inside the container
 WORKDIR /app
+
+# Copy package.json and package-lock.json
 COPY package*.json ./
+
+# Install dependencies
 RUN npm install
+
+# Copy the rest of your application files
 COPY . .
+
+# build the site
 RUN npm run build
 
 # Production Stage
