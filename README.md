@@ -1,4 +1,14 @@
-# Flask Migrate Postgres with Nginx Server Docker Template
+# Full Stack Docker Compose Template
+Stand up a connected backend and frontend using Docker Compose.
+
+Includes:
+
+- backend
+    - python with Flask and Flask Migrate 
+    - Postgres
+- frontend
+    - Flutter built and running on an Nginx server
+    - React
 
 ## Dependencies
 - [Docker](https://docs.docker.com/desktop/setup/install/mac-install/).
