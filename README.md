@@ -32,11 +32,11 @@ So the backend succeeded at connecting to Postgres and running the database migr
 
 ## Run
 
-    docker-compose up -d
-    docker-compose down -d
+    docker-compose -p full_stack_app up -d
+    docker-compose -p full_stack_app down
 
 ## Development
 
 After code changes, delete containers and images and re-compose them:
 
-    docker-compose down --rmi all -v --remove-orphans && docker-compose build; docker-compose up -d
+    docker-compose -p full_stack_app down --rmi all -v --remove-orphans && docker-compose build; docker-compose -p full_stack_app up -d
