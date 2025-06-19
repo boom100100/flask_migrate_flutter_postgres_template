@@ -42,9 +42,9 @@ In the browser, the backend response (at http://localhost:5000) and the frontend
 So the backend succeeded at connecting to Postgres and running the database migration, and then it succeeded at querying the database. For the frontend's part, it succeeded at hitting the backend endpoint and it received the same response the functioning backend sends out from `/api/v1/seeds`.
 
 ## Run
+Run the stack with `docker-compose -p web_app up -d`.
 
-    docker-compose -p web_app up -d
-    docker-compose -p web_app down
+Terminate it with `docker-compose -p web_app down`.    
 
 ## Development
 
