@@ -15,4 +15,4 @@ mv Dockerfile.react_prod ./react_app/Dockerfile.react_prod
 mv -f App.js ./react_app/src/App.js
 
 # compose and run docker containers
-docker-compose build; docker-compose -p full_stack_app up -d
+docker-compose build; docker-compose -p web_app up -d
