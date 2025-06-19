@@ -37,7 +37,7 @@ services:
         condition: service_healthy
         restart: true
 
-  frontend:
+  flutter:
     build:
       context: flutter
       args:
@@ -47,3 +47,14 @@ services:
       - ./flutter:/src
     ports:
       - 80:80
+
+  react:
+    build:
+      context: react_app
+      args:
+        BACKEND_URI: http://localhost:5000
+    image: react_frontend
+    volumes:
+      - ./react_app:/src
+    ports:
+      - 3000:3000
