@@ -28,6 +28,7 @@ services:
       - 5000:5000
     environment:
       FLASK_SERVER_PORT: 5000
+      FLASK_APP: app/app.py
       DB_URI: postgresql://postgres:postgres@postgres_db/db_1
     volumes:
       - ./flask:/src
